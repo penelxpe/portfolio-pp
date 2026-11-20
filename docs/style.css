@@ -1,133 +1,191 @@
-    body {
-        text-align: center;
-        cursor: default;
-    }
-    
-    .flex-container_homepage {
-        padding: 3%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .videointro-container {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .videointro {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px;
-        pointer-events: none;
-    }
-    
-    video::-webkit-media-controls,
-    video::-webkit-media-controls-enclosure,
-    video::-webkit-media-controls-panel,
-    video::-webkit-media-controls-play-button,
-    video::-webkit-media-controls-start-playback-button,
-    video::-webkit-media-controls-overlay-play-button {
-        display: none !important;
-    }
-    
-    video::-webkit-media-controls-start-playback-button,
-    video::-webkit-media-controls-overlay-play-button {
-        -webkit-appearance: none;
-    }
-    
-    .item {
-        position: relative;
-        overflow: visible;
-        padding: 5% 0 0;
-        border-radius: 25px;
-        text-align: center;
-        transform: scale(1);
-        transform-origin: center;
-        transition: transform 0.4s ease;
-        z-index: 1;
-    }
-    
-    .item:hover {
-        height: 300px;
-        transform: scale(1.05);
-        transition: transform 0.4s ease;
-    }
-
-    .item:hover,
-    .item:hover * {
-        cursor: url('portfolio_penelope_perret/material/icons/cursor_hover.png') 0 0, auto;
-    }
-    
-    .hover-text {
-        font-size: 1.9rem;
-        display: none;
-        color: rgb(195, 195, 195);
-    }
-    
-    .default-text {
-        display: block;
-        margin: 3% auto;
-        border-radius: 50px;
-        font-size: 5rem;
-        color: rgb(255, 0, 191);
-    }
-    
-    .item:hover .default-text {
-        display: block;
-    }
-    
-    .item:hover .hover-text {
-        display: block;
-    }
-    
-    .background-video {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-        opacity: 0;
-        border-radius: 30px;
-        transition: opacity 0.4s ease;
-    }
-    
-    .item:hover .background-video {
-        transition: opacity 0.4s ease;
-        opacity: 1;
-    }
-    
-    .item.invasive {
-        overflow: visible;
-    }
-    
-    .hover-video {
-        position: absolute;
-        top: 0;
-        left: 1.5%;
-        width: 30%;
-        height: auto;
-        border-radius: 30px;
-        object-fit: cover;
-        z-index: 10;
-        pointer-events: none;
-    }
-    
-    .szeno {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    
-    .footer {
-        margin-top: 20%;
-        color: rgb(255, 0, 191);
-    }
-    
-    * {
-        cursor: auto;
-    }
+                        body {
+                            text-align: center;
+                            cursor: default;
+                        }
+                        
+                        body.homepage {
+                            position: relative;
+                            background: transparent;
+                        }
+                        
+                        body.homepage canvas {
+                            display: none;
+                        }
+                        
+                        .flex-container_homepage {
+                            position: relative;
+                            z-index: 1;
+                            padding: 3%;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        
+                        .videointro-container {
+                            position: absolute;
+                            inset: 0 0 auto 0;
+                            z-index: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: flex-start;
+                            overflow: hidden;
+                            pointer-events: none;
+                        }
+                        
+                        .container-projects {
+                            margin-top: 50%;
+                        }
+                        
+                        .videointro,
+                        .mobile-video {
+                            position: absolute;
+                            inset: 0;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            object-position: top center;
+                            border-radius: 0;
+                            pointer-events: none;
+                        }
+                        
+                        .mobile-video {
+                            display: none;
+                        }
+                        
+                        video::-webkit-media-controls,
+                        video::-webkit-media-controls-enclosure,
+                        video::-webkit-media-controls-panel,
+                        video::-webkit-media-controls-play-button,
+                        video::-webkit-media-controls-start-playback-button,
+                        video::-webkit-media-controls-overlay-play-button {
+                            display: none !important;
+                        }
+                        
+                        video::-webkit-media-controls-start-playback-button,
+                        video::-webkit-media-controls-overlay-play-button {
+                            -webkit-appearance: none;
+                        }
+                        
+                        .item {
+                            position: relative;
+                            overflow: visible;
+                            padding: 5% 0 0;
+                            border-radius: 25px;
+                            text-align: center;
+                            transform: scale(1);
+                            transform-origin: center;
+                            transition: transform 0.4s ease;
+                            z-index: 1;
+                        }
+                        
+                        .item:hover {
+                            height: 8%;
+                            transform: scale(1.05);
+                            transition: transform 0.4s ease;
+                        }
+                        
+                        .item:hover,
+                        .item:hover * {
+                            cursor: url('portfolio_penelope_perret/material/icons/cursor_hover.png') 0 0, auto;
+                        }
+                        
+                        .hover-text {
+                            padding-bottom: 1%;
+                            font-size: 2.2rem;
+                            display: none;
+                            color: rgb(195, 195, 195);
+                        }
+                        
+                        .default-text {
+                            display: block;
+                            margin: 2% auto;
+                            border-radius: 50px;
+                            font-size: 5rem;
+                            color: rgb(255, 0, 191);
+                        }
+                        
+                        .item:hover .default-text {
+                            display: block;
+                            margin-bottom: 0;
+                            padding-bottom: 0;
+                        }
+                        
+                        .item:hover .hover-text {
+                            display: block;
+                            padding-bottom: 6%;
+                            border-top: -5%;
+                        }
+                        
+                        .background-video {
+                            position: absolute;
+                            inset: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            z-index: -1;
+                            opacity: 0;
+                            border-radius: 30px;
+                            transition: opacity 0.4s ease;
+                        }
+                        
+                        .item:hover .background-video {
+                            transition: opacity 0.4s ease;
+                            opacity: 1;
+                        }
+                        
+                        .item.invasive {
+                            overflow: visible;
+                        }
+                        
+                        .hover-video {
+                            position: absolute;
+                            top: 0;
+                            left: 1.5%;
+                            width: 30%;
+                            height: auto;
+                            border-radius: 30px;
+                            object-fit: cover;
+                            z-index: 10;
+                            pointer-events: none;
+                        }
+                        
+                        .szeno {
+                            margin: 0;
+                            padding: 0;
+                            text-align: center;
+                        }
+                        
+                        .footer {
+                            margin-top: 20%;
+                        }
+                        
+                        .footer-buttons {
+                            display: flex;
+                            justify-content: center;
+                            gap: 1rem;
+                            margin: 1rem 0;
+                        }
+                        
+                        .footer-button {
+                            display: inline-block;
+                            padding: 0.5em 1em;
+                            background-color: rgb(255, 0, 191);
+                            color: rgb(255, 255, 255);
+                            border-radius: 100px;
+                            text-decoration: none;
+                        }
+                        
+                        * {
+                            cursor: auto;
+                        }
+                        
+                        @media (max-width: 768px) {
+                            .videointro {
+                                display: none;
+                            }
+                            .mobile-video {
+                                display: block;
+                            }
+                        }
