@@ -90,19 +90,21 @@
         
         html {
             scroll-behavior: smooth;
+            scrollbar-color: rgb(255, 0, 191) #ffffff;
+            scrollbar-width: thin;
         }
         
-         ::-webkit-scrollbar {
-            width: vw;
+        html::-webkit-scrollbar {
+            width: 12px;
         }
         
-         ::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px rgb(133, 24, 24);
+        html::-webkit-scrollbar-track {
+            background: rgb(255, 0, 191);
             border-radius: 10px;
         }
-        /* Handle */
         
-         ::-webkit-scrollbar-thumb {
-            background: red;
+        html::-webkit-scrollbar-thumb {
+            background: rgb(255, 0, 191);
+            border: #ffffff;
             border-radius: 10px;
         }

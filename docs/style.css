@@ -71,7 +71,7 @@
                         .item {
                             position: relative;
                             overflow: visible;
-                            padding: 5% 0 0;
+                            padding: 10% 0 0;
                             border-radius: 25px;
                             text-align: center;
                             transform: scale(1);
@@ -88,7 +88,7 @@
                         
                         .item:hover,
                         .item:hover * {
-                            cursor: url('portfolio_penelope_perret/material/icons/cursor_hover.png') 0 0, auto;
+                            cursor: url('portfolio_penelope_perret/material/icons/cursor_hover_small.png') 0 0, pointer;
                         }
                         
                         .hover-text {
